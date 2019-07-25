@@ -190,6 +190,9 @@ export class RichText extends React.Component<IRichTextProps, IRichTextState> {
     if (isEqual(nextState, this.state)) {
       return false;
     }
+    if (nextProps.value) {
+      this.setState({text: nextProps.value}); 
+    }
 
     return true;
   }
